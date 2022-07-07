@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    overflow-x: none;
+
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+
+}
+
+.cabecalho {
+    background-color: #005678;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2.1vh;
+}
+
+.cabecalho-logo img {
+    max-width: 21vh;
+    width: 100%;
+    display: flex;
+    
+
+}
+
+.cabecalho-logo {
+    margin: 0 2.1vh;
+    
+}
+
+.cabecalho-dropdown ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #005678;
+
+}
+
+.cabecalho-dropdown ul li {
+    display: inline;
+    position: relative;
+    
+}
+
+.cabecalho-dropdown ul li a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1vh;
+    
+}
+
+.cabecalho-dropdown ul li a:hover {
+    transition: 0.1s;
+    font-weight: bold;
+    
+}
+
+/* sub-menu */
+.cabecalho-dropdown ul ul {
+    display: none;
+    left: 0;
+    position: absolute;
+    
+}
+
+.cabecalho-dropdown ul li:hover ul {
+    display: block;
+    font-size: 10px;
+}
+
+.cabecalho-dropdown ul ul li a {
+    display: block;
+
+}
+
+.btn-area-do-parceiro {
+    background-image: linear-gradient(to right,white 50%,#ffffff 50%);
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 0.3vh 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s ease-in-out;
+    font-weight: 900;
+
+}
+
+.btn-area-do-parceiro:before {
+    content: '';
+    background: #9C1E1A;
+    display: block;
+    position: absolute;
+    bottom: -0.3vh;
+    left: 0;
+    width: 0;
+    height: 0.3vh;
+    transition: all 0.5s ease-in-out;
+}
+
+.btn-area-do-parceiro:hover {
+    background-position: 0;
+    
+}
+
+.btn-area-do-parceiro:hover::before {
+    width: 100%;
+}
+
+.main-home-certificados{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    line-height: 5rem;
+}
+
+.main-home-certificados p{
+    background-color: red;
+    line-height: 1rem;
+}
+
+.main-home-certificados h2{
+    background-color: #9C1E1A;
+    padding: 10px 0 10px;
+}
+
+.main-home-certificados h3{
+    background: #005678;
+    font-size: 22px;
+}
+
+.main-home-certificados h4{
+    background-color: yellow;
+    line-height: 10px;
+}
+
+.main-home-certificado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: green;
+    display: flex;
+    padding: 24px 16px 40px;
+    border: 1px solid rgba(0, 0, 0, 0.158);
+    max-width: 250px;
+}
+
+.text-main-home{
+    background-color: blueviolet;
+    text-align: center;
+   background-color: #fbfbfb;
+}
+
+.preco-main-certificado{
+    line-height: 25px;
+    padding: 0 0 10px 0;
+    background-color: violet;
+}
+
+.main-price-certificado{
+    background-color: cyan;
+}
