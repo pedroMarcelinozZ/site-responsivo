@@ -1,176 +1,118 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    overflow-x: none;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow-x: hidden;
 }
 
-body {
-    background-color: rgb(255, 255, 255);
+a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 nav {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #006c97;
+  height: 11.5vh;
+  overflow-y: hidden;
 }
 
-.cabecalho {
-    background-color: #005678;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2.1vh;
+.logo-cabecalho {
+  max-width: 100%;
+  width: 148px;
 }
 
-.cabecalho-logo img {
-    max-width: 21vh;
-    width: 100%;
-    display: flex;
-    
-
+main {
+  background: url(logos/hunters-race.jpg) no-repeat center center;
+  background-size: cover;
+  height: 88.5vh;
 }
 
-.cabecalho-logo {
-    margin: 0 2.1vh;
-    
+.nav-list {
+  list-style: none;
+  display: flex;
 }
 
-.cabecalho-dropdown ul {
-    list-style-type: none;
-    padding: 0;
-    background-color: #005678;
-
+.nav-list li {
+  letter-spacing: 0.15em;
+  margin-left: 32px;
 }
 
-.cabecalho-dropdown ul li {
-    display: inline;
-    position: relative;
-    
-}
+@media (max-width: 992px) {
+  body {
+    overflow-x: hidden;
+  }
 
-.cabecalho-dropdown ul li a {
-    color: white;
-    text-decoration: none;
-    display: inline-block;
-    padding: 1vh;
-    
-}
+  .mobile-menu {
+    padding-left: 55vh;
+  }
 
-.cabecalho-dropdown ul li a:hover {
-    transition: 0.1s;
-    font-weight: bold;
-    
-}
+  .mobile-menu div {
+    cursor: pointer;
+    width: 32px;
+    height: 2px;
+    background: white;
+    margin: 8px;
+    transition: 0.3s;
+  }
 
-/* sub-menu */
-.cabecalho-dropdown ul ul {
-    display: none;
-    left: 0;
+  .nav-list {
     position: absolute;
-    
-}
-
-.cabecalho-dropdown ul li:hover ul {
-    display: block;
-    font-size: 10px;
-}
-
-.cabecalho-dropdown ul ul li a {
-    display: block;
-
-}
-
-.btn-area-do-parceiro {
-    background-image: linear-gradient(to right,white 50%,#ffffff 50%);
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    padding: 0.3vh 0;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.5s ease-in-out;
-    font-weight: 900;
-
-}
-
-.btn-area-do-parceiro:before {
-    content: '';
-    background: #9C1E1A;
-    display: block;
-    position: absolute;
-    bottom: -0.3vh;
-    left: 0;
-    width: 0;
-    height: 0.3vh;
-    transition: all 0.5s ease-in-out;
-}
-
-.btn-area-do-parceiro:hover {
-    background-position: 0;
-    
-}
-
-.btn-area-do-parceiro:hover::before {
-    width: 100%;
-}
-
-.main-home-certificados{
-    background-color: aquamarine;
-    display: flex;
-    justify-content: space-around;
-    line-height: 5rem;
-}
-
-.main-home-certificados p{
-    background-color: red;
-    line-height: 1rem;
-}
-
-.main-home-certificados h2{
-    background-color: #9C1E1A;
-    padding: 10px 0 10px;
-}
-
-.main-home-certificados h3{
-    background: #005678;
-    font-size: 22px;
-}
-
-.main-home-certificados h4{
-    background-color: yellow;
-    line-height: 10px;
-}
-
-.main-home-certificado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    top: 8vh;
+    right: 0;
+    width: 30vw;
+    height: 92vh;
+    background: #006c97;
     flex-direction: column;
-    background-color: green;
-    display: flex;
-    padding: 24px 16px 40px;
-    border: 1px solid rgba(0, 0, 0, 0.158);
-    max-width: 250px;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .nav-list.active {
+    transform: translateX(0);
+  }
+
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
 }
 
-.text-main-home{
-    background-color: blueviolet;
-    text-align: center;
-   background-color: #fbfbfb;
-}
-
-.preco-main-certificado{
-    line-height: 25px;
-    padding: 0 0 10px 0;
-    background-color: violet;
-}
-
-.main-price-certificado{
-    background-color: cyan;
-}
